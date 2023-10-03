@@ -1,13 +1,17 @@
 import Header from './Header';
 import Nav from './Nav-bar';
-function DefaultLayout({ children }) {
+import Footer from './Footer';
+function DefaultLayout({ children, loged, setlog }) {
     return (
         <div>
-            <Header />
-            <div className="container">
-                <Nav />
-                <div className="content">{children}</div>
+            <div className="default-layout">
+                <Nav loged = {loged} setlog = {setlog}/>
+                <div className="container">
+                    <Header setlog={setlog} loged={loged}/>
+                    <div className="content">{children}</div>
+                </div>
             </div>
+            <Footer />
         </div>
     );
 }

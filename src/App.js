@@ -1,7 +1,9 @@
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { publicRoute, privateRoute } from '~/routes';
 import DefaultLayout from './components/Layout/DefaultLayout';
+import { useState } from 'react';
 function App() {
+    const [logedin, setLogedin] = useState(false);
     return (
         <Router>
             <Routes>
@@ -13,8 +15,8 @@ function App() {
                             key={index}
                             path={route.path}
                             element={
-                                <Layout>
-                                    <Page />
+                                <Layout loged = {logedin} setlog={setLogedin}>
+                                    <Page loged = {logedin} setlog={setLogedin}/>
                                 </Layout>
                             }
                         />
@@ -28,8 +30,8 @@ function App() {
                             key={index}
                             path={route.path}
                             element={
-                                <Layout>
-                                    <Page />
+                                <Layout loged = {logedin} setlog={setLogedin}>
+                                    <Page loged = {logedin} setlog={setLogedin}/>
                                 </Layout>
                             }
                         />
