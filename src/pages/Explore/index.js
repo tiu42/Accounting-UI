@@ -1,4 +1,5 @@
 import './index.scss';
+import Card from '~/components/Card';
 function Explore({ loged }) {
     if (!loged) {
         return (

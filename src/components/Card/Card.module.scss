@@ -1,0 +1,17 @@
+.container{
+    width: 25%;
+    padding: 1.2rem 1.2rem 1.6rem 1.2rem;
+    .content{
+        height: 15rem;
+        border-radius: 1rem;
+        border: 1px solid #e3e3ee;
+        .cover{
+            height: 60%;
+            border-radius: 1rem;
+        }
+        .ava{
+            height: 4rem;
+            border-radius: 100%;
+        }
+    }
+}
